@@ -1,1 +1,232 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Ruda:wght@400;600;700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: "poppins", sans-serif;
+    overflow-x: hidden;
+  }
+  
+  header {
+    background: url("../imgs/bg.jpg") no-repeat center center/cover;
+    height: 100vh;
+    color: #fff;
+  }
+  
+  .container {
+    max-width: 1440px;
+    width: 100%;
+    margin: 0 auto;
+  }
+  
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 0;
+  }
+  
+  nav .logo a {
+    text-decoration: none;
+    color: #fff;
+    display: flex;
+    align-items: center;
+  }
+  
+  nav .logo a h2 {
+    font-size: 2rem;
+    letter-spacing: 2px;
+    margin-left: 5px;
+  }
+  
+  nav ul {
+    list-style-type: none;
+    display: flex;
+  }
+  
+  nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 1rem;
+    font-size: 1.1rem;
+    position: relative;
+  }
+  
+  nav ul li a::before {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background-color: #fff;
+    bottom: -10px;
+    transition: all 0.3s ease-in;
+  }
+  
+  nav ul li a:hover::before {
+    width: 100%;
+  }
+  
+  nav ul li a.active::before {
+    width: 100%;
+  }
+  
+  nav button {
+    border: 1px solid #ddd;
+    outline: none;
+    background-color: transparent;
+    color: #fff;
+    font-family: inherit;
+    padding: 0.6rem 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: all 0.2s ease-in;
+  }
+  
+  nav button:hover {
+    background-color: #fff;
+    color: #000;
+  }
+  
+  nav button:active {
+    transform: scale(0.98);
+  }
+  
+  .modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 2rem;
+    box-shadow: 5px 10px 5px rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    width: 450px;
+    display: none;
+    z-index: 2;
+  }
+  
+  .modal.active {
+    display: block;
+  }
+  
+  .modal i {
+    position: absolute;
+    right: 25px;
+    top: 20px;
+    cursor: pointer;
+    font-size: 1.2rem;
+  }
+  
+  .modal h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .btns {
+    display: flex;
+    justify-content: center;
+    margin: 1.5rem 0;
+  }
+  
+  .btn {
+    outline: none;
+    width: 100%;
+    border: none;
+    padding: 0.5rem 1rem;
+    font-family: inherit;
+    background-color: #ddd;
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+  
+  .btn:active {
+    transform: scale(0.98);
+  }
+  
+  .btn.active {
+    background-color: slateblue;
+    transform: translateY(-3px);
+  }
+  
+  .modal_body {
+    display: none;
+  }
+  
+  .modal_body.active {
+    display: block;
+  }
+  
+  .modal_body input {
+    width: 100%;
+    font-family: inherit;
+    outline: none;
+    padding: 0.5rem 0.8rem;
+    margin: 0.5rem 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+  }
+  
+  .modal_body .content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0.5rem 0;
+  }
+  
+  .modal_body .rem {
+    display: flex;
+    align-items: center;
+  }
+  
+  .modal_body .content label {
+    margin-left: 10px;
+  }
+  
+  .modal_body {
+    display: none;
+  }
+  
+  .modal_body.active {
+    display: block;
+  }
+  
+  .modal_footer button {
+    width: 100%;
+    outline: none;
+    border: none;
+    background-color: slateblue;
+    font-family: inherit;
+    font-size: 1rem;
+    padding: 0.7rem 1rem;
+    margin-top: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    color: #fff;
+  }
+  
+  .btn:active,
+  .modal_footer button:active {
+    transform: scale(0.98);
+  }
+  
+  .blr {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    filter: blur(80px);
+  }
+  
+  .blr.hide {
+    display: none;
+  }
