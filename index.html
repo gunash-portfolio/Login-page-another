@@ -11,6 +11,48 @@
     <title>Website Login & Register Form</title>
 </head>
 <body>
+<header>
+    <nav>
+        <div class="logo">
+            <a href="#">
+                <img src="./img/logo.png">
+                <h2>Design</h2>
+            </a>
+        </div>
+        <ul>
+            <li><a href="#" class="active">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+          <button type="button" class="btn_register">Login / Register</button>
+    </nav>
+</header>
 
+<div class="modal">
+    <i class="fa fa-close"></i>
+    <div class="modal_hdeader">
+      <div class="btns">
+        <button type="submit" class="btn btn_login active">Login</button>
+        <button type="submit" class="btn btn_register">Register</button>
+      </div>
+    </div>
+    <div class="modal_body active">
+      <h2>Login</h2>
+      <input type="text" placeholder="User Name or Email" />
+      <input type="password" placeholder="Password" />
+
+      <div class="content">
+        <div class="rem">
+          <input type="checkbox" />
+          <label> Remember</label>
+        </div>
+        <a href="#">Forget Password</a>
+      </div>
+
+      <div class="modal_footer">
+        <button type="button" class="btn_login">Login</button>
+      </div>
+    </div>
 </body>
 </html>
