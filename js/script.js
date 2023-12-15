@@ -15,3 +15,20 @@ btnsEl.forEach((btn, indx) => {
       modalBody[indx].classList.add("active");
     });
   });
+
+  btnRegister.addEventListener("click", () => {
+    modalEl.classList.add("active");
+    blrEl.style.display = "block";
+  });
+
+  closeBtn.addEventListener("click", () => {
+    modalEl.classList.remove("active");
+    blrEl.style.display = "none";
+  });
+  
+  linksEl.forEach((link) => {
+    link.addEventListener("click", () => {
+      linksEl.forEach((l) => l.classList.remove("active"));
+      link.classList.add("active");
+    });
+  });
